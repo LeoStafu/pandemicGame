@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+
+\title{Projet de programmation Java - Pandemic}
+\author{Leonard Dubois }
+\date{9 janvier 2018}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Implémentation du plateau de jeu}
+	Le graphe représentant le plateau (villes et connexions) est implémenté sous deux formes (objets \texttt{GraphAdajacent} et \texttt{GraphMatrix}). Ce dernier représente les liens entres les villes sous forme d'une matrice de \texttt{boolean}. La première implementation est utilisée pour le programme car son utilisation était plus intuitive. Dans cette implémentation, chaque objet \texttt{CityAdjacent} du Set complet (graphe) possède un Set d'objets du même type représentant sa liste de voisins.
+	
+	Chaque objet ville contient les informations sur le nom, un ID unique, la position en pixel sur l'image, la listes des voisins, le développement des maladies dans cette ville, et la couleur de la maladie régionale.
+	
+	
+	\section*{Joueurs et rôles}
+	Les joueurs sont des objets de la classe \texttt{Player} pouvant tous appeler la méthode \texttt{move()} pour se déplacer et \texttt{pass()} pour passer son tour. Les méthodes spécifiques à un rôle (par exemple l'infirmier soigne) sont des méthodes propres au objets des classes dérivées de \texttt{Player}.
+	
+	Les actions supplémentaires sont (dans la limite de 4 actions par tour):
+	\begin{itemize}
+	\item \texttt{heal [couleur]} : baisse le niveau d'infection de la couleur de 1 point dans la ville où est situé le joueur (\emph{Nurse})
+	
+	\item \texttt{moveTo [nomJoueurSource] [nomJoueurDestination]} : Permet de faire en sorte que le joueur Source rejoigne le joueur Destination peut importe la distance entre les villes (\emph{Distributor})
+	
+	\item \texttt{study} : permet d'avancer de manière aléatoire (une maladie au hasard) dans les recherches (7 max) (\emph{Doctor})
+	\item \texttt{showresearch} : affiche l'avancée des recherches - action gratuite (\emph{Doctor})
+	\item \texttt{forget [couleur]} : libère un point de recherche dans la couleur choisie (\emph{Doctor})
+	\item \texttt{cure [couleur]} : Si 5 points de recherche en [couleur], alors la maladie disparait (\emph{Doctor})
+	\item \texttt{exchange [Couleur1] [couleur2] [Joueur]} : Echange un point de recherche [couleur1] avec un point de recherche [couleur2] du [Joueur](\emph{Doctor})
+	\end{itemize}
+
+
+	\section*{Devéloppement des maladies}
+	Les maladies (objets \texttt{Disease}) effectuent chacune 3 actions de développement par tour. Une action de développement correspond à une probabilité de 1/3 de se développer dans une ville tirée au hasard et une probabilité de 2/3 que ce soit la maladie régionale qui se développe sur la ville à la place. Chaque malade peut donc se developper partout, mais on aura à long terme une plus grande concentration des maladies dans leur zones respectives.
+
+	De plus, la règle de l'explosion est ajoutée. Si un maladie doit se développer et que celle-ci est déjà au niveau 3 ou plus, il y a 1/2 chances pour que celle-ci explose à la place et se développe sur tous les voisins à la place.
+
+	Les maladies gagnent si 7 villes ou plus sont touchées par une maladie de niveau 3 ou plus. Toutes les probabilités evoquées plus haut peuvent facilement être ajustées au besoin (équilibrage du jeu voire ajout de modes de difficulté).
+	
+	\section*{Problèmes connus}
+	Une gestion plus fine des exceptions pourrait rendre le jeu plus agréable, en particulier en spécfiant davantage les messages d'erreur relatifs au commandes entrées par les joueurs. Par exemple, différentes exceptions et différents messages si le mot-clé de l'action est invalide, pas disponible pour le rôle occupé par le joueur, si la liste des arguments est incomplète...
+	
+	Par ailleurs, la gestion de l'affichage n'est pas particulièrement fluide. L'affichage des niveaux de chaque maladie peut surcharger le plateau à long terme.
+	
+	
+	\section*{Pistes d'ajout d'extensions}
+	\begin{itemize}
+	\item L'ajout des déplacements et/ou actions à la souris pourraient rendre le jeu encore plus ergonomique.
+	\item Il est très facile d'ajouter des rôles supplémentaires en ajoutant des classe dérivées de \texttt{Player} ou de complexifier des rôles existants en éditant les méthodes des classes les déinissant.
+	\item L'explosion pourrait être d'une intensité différente selon le niveau d'avancement de la maladie.
+	\item Dans un soucis de réalisme, lorsqu'un joueur se déplace depuis une ville contaminée, il serait interessant qu'il y ait une probabilité que celui-ci emporte la maladie dans la ville d'arrivée.		
+	\end{itemize}		
+			
+		
+\end{document}

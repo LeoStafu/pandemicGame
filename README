@@ -1,0 +1,26 @@
+Projet Java - Pandemic - Léonar Dubois
+
+Le programme permet de jouer à une version modifiée du jeu Pandemic.
+
+Au lancement on définit un nombre de joueurs qui peuvent occuper des rôles.
+Chaque rôle à des commandes propres permettant d'effectuer des actions (4/tour)
+
+Tous les joueurs quelque soit leur rôle peuvent bouger de ville en ville (voisines) avec la commande "move [villeDestination]"
+Ils peuvent aussi passer leur tour avec "pass"
+
+>Nurse
+Commande "heal [couleur]"  : baisse le niveau d'infection de la couleur de 1 point dans la ville où est situé le joueur
+
+>Distributor
+Commande "moveTo [nomJoueurSource] [nomJoueurDestination]" : Permet de faire en sorte que le joueur Source rejoigne le joueur Destination peut importe la distance entre les villes 
+
+>Doctor
+Commande "study" : permet d'avancer de manière aléatoire dans les recherches (7 max)
+Commande "showresearch" : affiche l'avancée des recherches 
+Commande "forget [couleur] : libère un point de recherche dans la couleur choisie
+Commande "cure [couleur]" : Si 5 points de recherche en [couleur], alors la maladie disparait
+Commance "Exchange [Couleur1] [couleur2] [Joueur]" : Echange un point de recherche [couleur1] avec un point de recherche [couleur2] du [Joueur]
+
+
+
+Attention, si 7 villes ou plus présentent un niveau d'infection de 3 ou plus. Les joueurs ont perdu.

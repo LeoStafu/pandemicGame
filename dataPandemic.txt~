@@ -1,0 +1,140 @@
+48
+1200 800
+SanFrancisco	#	Blue	# 	{ 105,280 }
+Chicago			#	Blue	#	{ 203,249 }
+Montreal		#	Blue	#	{ 288,243 }
+NewYork		#	Blue	#	{ 350,259 }
+Atlanta			#	Blue	#	{ 240,307 }
+Washington		#	Blue	#	{ 325,304 }
+Londres			#	Blue	#	{ 500,212 }
+Essen			#	Blue	#	{ 593,197 }
+Paris			#	Blue	#	{ 570,249 }
+Madrid			#	Blue	#	{ 492,287 }
+Milan			#	Blue	#	{ 623,232 }
+StPetersbourg	# 	Blue	#	{ 681,183 }
+LosAngeles		#	Yellow	#	{ 117,358 }
+Mexico			#	Yellow	#	{ 195,386 }
+Miami			#	Yellow	#	{ 290,369 }
+Bogota			#	Yellow	#	{ 284,451 }
+Lima			#	Yellow	#	{ 252,529 }
+Santiago		#	Yellow	#	{ 267,622 }
+BuenosAires	#	Yellow	#	{ 351,609 }
+SaoPaulo		#	Yellow	#	{ 399,547 }
+Lagos			#	Yellow	#	{ 559,438 }
+Khartoum		#	Yellow	#	{ 665,422 }
+Kinshasa		#	Yellow	#	{ 611,494 }
+Johannesburg	#	Yellow	#	{ 659,570 }
+Alger			# 	Black	#	{ 585,327 }
+Istanbul		# 	Black	#	{ 656,278 }
+Moscou			# 	Black	#	{ 725,234 }
+LeCaire		# 	Black	#	{ 651,346 }
+Bagdad			# 	Black	#	{ 719,317 }
+Téhéran			# 	Black	#	{ 781,274 }
+Riyad			# 	Black	#	{ 730,383 }
+Karachi			# 	Black	#	{ 795,340 }
+Delhi			# 	Black	#	{ 860,325 }
+Mumbai			# 	Black	#	{ 810,399 }
+Calcuta			# 	Black	#	{ 920,337 }
+Chennai			# 	Black	#	{ 872,443 }
+Pékin			#	Red	#	{ 963,251 }
+Séoul			#	Red	#	{ 1037,249 }
+Shanghai		#	Red	#	{ 969,308 }
+Tokyo			#	Red	#	{ 1102,277 }
+HongKong		#	Red	#	{ 980,369 }
+Taipei			#	Red	#	{ 1046,360 }
+Osaka			#	Red	#	{ 1098,338 }
+Bangkok			#	Red	#	{ 927,404 }
+HoChiMin		#	Red	#	{ 979,465 }
+Manille			#	Red	#	{ 1064,453 }
+Jakarta			#	Red	#	{ 932,513 }
+Sydney			#	Red	#	{ 1106,620 }
+LosAngeles		##	Sydney
+LosAngeles		##	SanFrancisco
+LosAngeles		##	Chicago
+LosAngeles		##	Mexico
+Mexico			##	Chicago
+Mexico			##	Miami
+Mexico			##	Bogota
+Mexico			##	Lima
+Miami			##	Atlanta
+Miami			##	Washington
+Miami			##	Bogota
+Bogota			##	Lima
+Bogota			##	SaoPaulo
+Bogota			##	BuenosAires
+Lima			##	Santiago
+BuenosAires	##	SaoPaulo
+SaoPaulo		##	Lagos
+SaoPaulo		##	Madrid
+Lagos			##	Khartoum
+Lagos			##	Kinshasa
+Khartoum		##	LeCaire
+Khartoum		##	Kinshasa
+Khartoum		##	Johannesburg
+Johannesburg	##	Kinshasa
+SanFrancisco	##	Manille
+SanFrancisco	##	Tokyo
+SanFrancisco	##	Chicago
+Chicago			##	Atlanta
+Chicago			##	Montréal
+Atlanta			## 	Washington
+Washington		## 	Montréal
+Washington		## 	NewYork
+NewYork		##	Montréal
+NewYork		##	Londres
+NewYork		##	Madrid
+Londres			##	Essen
+Londres			##	Paris
+Londres			##	Madrid
+Essen			##	StPetersbourg
+Essen			##	Milan
+Essen			##	Paris
+Madrid			##	Paris
+Madrid			##	Alger
+Paris			##	Alger
+Paris			##	Milan
+Milan			##	Istanbul
+StPetersbourg	##	Moscou
+StPetersbourg	##	Istanbul
+Alger	##	Istanbul
+Alger	##	LeCaire
+Istanbul	##	Moscou
+Istanbul	##	Bagdad
+Istanbul	##	LeCaire
+Téhéran	##	Moscou
+Téhéran	##	Bagdad
+Téhéran	##	Delhi
+Bagdad	##	LeCaire
+Bagdad	##	Riyad
+Bagdad	##	Karachi
+LeCaire	##	Riyad
+Riyad	##	Karachi
+Karachi	##	Delhi
+Karachi	##	Mumbai
+Mumbai ## Chennai
+Delhi	##	 Calcutta
+Delhi	##	 Chennai
+Calcutta	## 	Chennai
+Calcutta	## 	Bangkok
+Calcutta	## 	HongKong
+Chennai	##	Bangkok
+Chennai	##	Jakarta
+Pékin	##	Séoul
+Pékin	##	Shanghai
+Séoul 	##	Tokyo
+Séoul	##	Shanghai
+Shanghai	##	Tokyo
+Shanghai	##	Taipei
+Shanghai	##	HongKong
+Tokyo	##	Osaka
+HongKong	##	Taipei
+HongKong	##	Manille
+HongKong	##	HoChiMin
+HongKong	##	Bangkok
+Taipei	## Osaka
+Bangkok	##	HoChiMin
+Bangkok	##	Jakarta
+Jakarta	##	HoChiMin
+Jakarta	##	Sydney
+HoChiMin	##	Manille
+Manille	##	SanFrancisco
